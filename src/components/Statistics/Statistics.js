@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import style from './Statistics.module.css';
+import generateRandomColor from './colorGenerator';
 
 export default function Statistics({ title, stats }) {
   return (
@@ -8,7 +9,11 @@ export default function Statistics({ title, stats }) {
 
       <ul className={style.stat_list}>
         {stats.map(el => (
-          <li key={el.id} className={style.item}>
+          <li
+            key={el.id}
+            className={style.item}
+            style={{ backgroundColor: generateRandomColor() }}
+          >
             <span className={style.label}>{el.label}</span>
             <span className={style.percentage}>{el.percentage}</span>
           </li>
