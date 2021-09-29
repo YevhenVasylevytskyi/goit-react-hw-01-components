@@ -19,8 +19,8 @@ export default function App() {
         views={profiles.stats.views}
         likes={profiles.stats.likes}
       />
-      ,<Statistics stats={statisticalData} title="Upload stats"></Statistics>,
-      <FriendList friends={friends} />,
+      <Statistics stats={statisticalData} title="Upload stats"></Statistics>
+      <FriendList friends={friends} />
       <TransactionHistory items={transactions} />;
     </div>
   );
